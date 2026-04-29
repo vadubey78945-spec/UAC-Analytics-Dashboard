@@ -42,15 +42,15 @@ section[data-testid="stSidebar"] *{color:#e0e0e0!important;}
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 .kpi-label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #8b92a5;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 .kpi-value {
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 800;
     line-height: 1.2;
 }
@@ -61,7 +61,7 @@ section[data-testid="stSidebar"] *{color:#e0e0e0!important;}
     font-style: italic;
 }
 .kpi-interp {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #a0a8c0;
     margin-top: 5px;
 }
@@ -123,7 +123,7 @@ with st.sidebar:
     else:
         st.info("Bundled Dataset Loaded")
 
-st.markdown("<h1 style='font-size:2.2rem;font-weight:800;color:#00d2d3;font-family:Inter;'>"
+st.markdown("<h1 style='font-size:1.8rem;font-weight:800;color:#00d2d3;'>"
             "UAC System Capacity & Care Load Analytics</h1>", unsafe_allow_html=True)
 
 # --- DATA LOADING LOGIC ---

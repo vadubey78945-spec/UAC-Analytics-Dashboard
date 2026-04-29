@@ -6,7 +6,8 @@
 ![Scikit-Learn](https://img.shields.io/badge/Scikit_Learn-Machine%20Learning-F7931E?style=for-the-badge&logo=scikit-learn)
 ![Plotly](https://img.shields.io/badge/Plotly-Data%20Visualization-3F4F75?style=for-the-badge&logo=plotly)
 
-🔗 **Live Dashboard:** [View Application Here] (https://uac-capacity-intelligence.streamlit.app/)
+🔗 **Live Dashboard:** [View Application Here](https://uac-capacity-intelligence.streamlit.app/)
+
 
 ## 📖 Overview
 
