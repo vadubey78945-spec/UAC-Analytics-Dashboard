@@ -1,0 +1,12 @@
+# Web Application Framework
+streamlit>=1.32.0,<2.0.0
+
+# Data Processing
+pandas>=2.1.0,<3.0.0
+numpy>=1.26.0,<2.0.0
+
+# Machine Learning (forecasting)
+scikit-learn>=1.4.0,<2.0.0
+
+# Visualisation
+plotly>=5.20.0,<6.0.0
