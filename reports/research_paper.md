@@ -17,7 +17,7 @@ The transition of UAC from CBP temporary custody to HHS care facilities is a hig
 
 ### 2.1 Initial Data Assessment & Challenges
 During the initial development phase, a thorough Exploratory Data Analysis (EDA) was conducted on the provided government dataset consisting of 1,170 records. Two primary data quality challenges were identified and addressed:
-* **Chronological Parsing Complexities:** The dataset utilized full-month string formats (e.g., `December 21, 2025`). To ensure robust data extraction and prevent partial parsing errors (such as algorithms dropping long-month names while only matching short names like "May"), a dynamic date-inference engine was implemented from scratch.
+* **Chronological Parsing Complexities:** The dataset utilized full-month string formats (e.g., `December 21, 2025`). To ensure robust data extraction and prevent partial parsing errors, a dynamic date-inference engine was implemented from scratch.
 * **Export Artifacts (Ghost Rows):** The tail end of the dataset contained exactly 450 empty records (`NaN`). These were identified as database export artifacts lacking both temporal and numeric data, reducing the actual valid operational timeline to 720 continuous days.
 
 ### 2.2 Robust Preprocessing & Imputation
