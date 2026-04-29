@@ -1,6 +1,6 @@
 # Care Transition Efficiency & Placement Outcome Analytics: A Predictive Data Intelligence Approach for UAC Pipelines
 
-**Exploratory Data Analysis, Insights, and Strategic Recommendations
+**Exploratory Data Analysis, Insights, and Strategic Recommendations**
 
 *Submitted for Internship Evaluation* *U.S. Dept. of Health & Human Services (HHS) Operational Data Analysis*
 

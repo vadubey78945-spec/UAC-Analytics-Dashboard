@@ -6,7 +6,7 @@
 ![Scikit-Learn](https://img.shields.io/badge/Scikit_Learn-Machine%20Learning-F7931E?style=for-the-badge&logo=scikit-learn)
 ![Plotly](https://img.shields.io/badge/Plotly-Data%20Visualization-3F4F75?style=for-the-badge&logo=plotly)
 
-🔗 **Live Dashboard:** [View Application Here]
+🔗 **Live Dashboard:** [View Application Here] (https://uac-capacity-intelligence.streamlit.app/)
 
 ## 📖 Overview
 
@@ -114,7 +114,7 @@ For developers and evaluators, the dashboard includes a hidden diagnostic mode t
 
 To activate it, append `?debug=true` to the application URL:
 * **If running locally:** `http://localhost:8501/?debug=true`
-* **If viewing the live deployment:** `https://<your-live-app-url>/?debug=true`
+* **If viewing the live deployment:** https://uac-capacity-intelligence.streamlit.app//?debug=true`
 
 **This mode reveals:**
 * **Raw & Processed Samples:** Live snapshots of the dataframe before and after pipeline transformations.
