@@ -24,6 +24,9 @@ st.set_page_config(page_title="UAC Analytics Platform", page_icon="🏥",
 
 st.markdown("""
 <style>
+/* Hide Streamlit Default Menu, Toolbar, and Footer */
+[data-testid="stToolbar"] {visibility: hidden !important;}
+footer {visibility: hidden !important;}
 
 html, body, [class*="css"] {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
