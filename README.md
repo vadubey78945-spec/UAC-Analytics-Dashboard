@@ -66,27 +66,29 @@ uac_analytics/
     ├── simulation.py       # Logic for scenario/what-if sliders
     └── insights.py         # Text generation for automated insights
 
-⚙️ Installation & Setup
+## ⚙️ Installation & Setup
+
 Clone the repository:
-
-Bash
-git clone (https://github.com/vadubey78945-spec/UAC-Analytics-Dashboard.git)
+```bash
+git clone https://github.com/vadubey78945-spec/UAC-Analytics-Dashboard.git
 cd uac_analytics
-Create a virtual environment (Recommended):
+```
 
-Bash
+Create a virtual environment (Recommended):
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
+```
+
 Install required dependencies:
-
-Bash
+```bash
 pip install -r requirements.txt
-
+```
 
 Run the Dashboard:
-Bash
+```bash
 streamlit run app.py
-
+```
 
 ## 📊 Expected Data Format
 
