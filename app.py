@@ -104,10 +104,9 @@ def section_header(title, subtitle=""):
 
 @st.cache_data(show_spinner="Loading & preprocessing dataset...")
 def get_data(path):
-    raw_df, debug_info = load_data(path)
-    df, prep_report    = preprocess(raw_df)
-    return df, debug_info, prep_report
-
+    raw_df, _ = load_data(path)
+    df, _     = preprocess(raw_df)
+    return df
 
 with st.sidebar:
     st.markdown("## UAC Analytics")
@@ -134,14 +133,14 @@ try:
             with tempfile.NamedTemporaryFile(delete=False, suffix=".csv") as tmp:
                 shutil.copyfileobj(uploaded, tmp)
                 tmp_path = Path(tmp.name)
-            df, debug_info, prep_report = get_data(tmp_path)
+            df = get_data(tmp_path)
         else:
             st.markdown("---")
             st.info("Upload a CSV from the sidebar or select the bundled dataset to begin.")
             st.stop() 
             
     else:
-        df, debug_info, prep_report = get_data(DATA_PATH)
+        df = get_data(DATA_PATH)
         
 except (FileNotFoundError, KeyError, ValueError) as err:
     st.error(f"Data Load Failed: {err}")
@@ -173,24 +172,6 @@ else:
 
 if df_view.empty:
     st.warning("No data in selected date range."); st.stop()
-
-# --- DEVELOPER DEBUG MODE ---
-if "debug" in st.query_params and st.query_params["debug"] == "true":
-    st.sidebar.error("🛠️ DEVELOPER DEBUG MODE ACTIVE")
-    with st.expander("🛠️ Developer Debug Panel", expanded=True):
-        c1, c2 = st.columns(2)
-        with c1:
-            st.markdown("**Raw Columns**"); st.code("\n".join(debug_info["raw_columns"]))
-            st.markdown("**Mapping Log**")
-            st.dataframe(pd.DataFrame(debug_info["mapping_log"]), width="stretch")
-        with c2:
-            st.markdown("**Sample Data**")
-            st.dataframe(pd.DataFrame(prep_report["head"]), width="stretch")
-            st.markdown("**Null Summary**")
-            st.dataframe(pd.DataFrame({"Before": prep_report["null_summary"]["before"],
-                                       "After":  prep_report["null_summary"]["after"]}),
-                         width="stretch")
-        st.dataframe(pd.DataFrame(prep_report["constraint_violations"]), width="stretch")
 
 # --- KPI COMPUTATION, FORECASTING, AND INSIGHTS GENERATION ---
 kpis           = compute_kpis(df_view)

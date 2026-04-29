@@ -1,4 +1,4 @@
-# 📊 UAC System Capacity & Care Load Analytics
+# 🏥 UAC System Capacity & Care Load Analytics
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-FF4B4B?style=for-the-badge&logo=streamlit)
@@ -48,6 +48,7 @@ uac_analytics/
 ├── app.py                  # Main Streamlit dashboard application
 ├── README.md               # Project documentation
 ├── requirements.txt        # Python dependencies
+├── .gitignore              # Git configuration to ignore env and cache files
 │
 ├── data/                   # Directory for raw data
 │   └── HHS_Unaccompanied_Alien_Children_Program.csv 
@@ -69,7 +70,7 @@ uac_analytics/
 Clone the repository:
 
 Bash
-git clone <your-repository-url>
+git clone (https://github.com/vadubey78945-spec/UAC-Analytics-Dashboard.git)
 cd uac_analytics
 Create a virtual environment (Recommended):
 
@@ -107,20 +108,6 @@ The application is designed to intelligently parse datasets originating from HHS
 * Forecasting: Select the forecast horizon (7 or 14 days) in the sidebar to project future system loads.
 
 * Simulations: Navigate to the 'Forecast & Simulation' tab and adjust the sliders to run "What-If" scenarios on intake and discharge volumes.
-
-## 🛠️ Advanced Usage (Hidden Features)
-
-**Pipeline Diagnostics (Debug Mode):**
-For developers and evaluators, the dashboard includes a hidden diagnostic mode to audit the data preprocessing pipeline in real-time. 
-
-To activate it, append `?debug=true` to the application URL:
-* **If running locally:** `http://localhost:8501/?debug=true`
-* **If viewing the live deployment:** https://uac-capacity-intelligence.streamlit.app//?debug=true`
-
-**This mode reveals:**
-* **Raw & Processed Samples:** Live snapshots of the dataframe before and after pipeline transformations.
-* **Column Mapping Logs:** Displays the dynamic mapping logic used to standardize verbose government CSV headers into clean, usable internal variables.
-* **Null Summary:** Real-time tracking of missing values (NaNs) before and after the imputation processes, providing absolute transparency into the data sanitization engine.
 
 ⚖️ Disclaimer
 This project was developed for academic/internship demonstration purposes. It utilizes publicly available or mocked structural data and should not be used as the sole basis for real-world policy decisions without official vetting.
