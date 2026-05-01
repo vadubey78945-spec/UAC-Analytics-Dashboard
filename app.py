@@ -24,8 +24,6 @@ st.set_page_config(page_title="UAC Analytics Platform", page_icon="🏥",
 
 st.markdown("""
 <style>
-/* Hide Streamlit Default Menu, Toolbar, and Footer */
-[data-testid="stToolbar"] {visibility: hidden !important;}
 footer {visibility: hidden !important;}
 
 html, body, [class*="css"] {
